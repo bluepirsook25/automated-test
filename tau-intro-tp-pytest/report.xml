@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="11" time="0.149" timestamp="2025-08-04T10:33:06.187384+02:00" hostname="DESKTOP-OGFRP7D"><testcase classname="tests.test_accum" name="test_accumulator_init" time="0.001"><failure message="AttributeError: 'Accumulator' object has no attribute 'count'">accum = &lt;stuff.accum.Accumulator object at 0x0000019F0B742CF0&gt;
+accum2 = &lt;stuff.accum.Accumulator object at 0x0000019F0B78C410&gt;
+
+    def test_accumulator_init(accum, accum2):
+    
+&gt;       assert accum.count == 0
+               ^^^^^^^^^^^
+E       AttributeError: 'Accumulator' object has no attribute 'count'
+
+tests\test_accum.py:13: AttributeError</failure></testcase><testcase classname="tests.test_accum" name="test_accumulator_add_one" time="0.001"><failure message="AttributeError: 'Accumulator' object has no attribute 'add'">accum = &lt;stuff.accum.Accumulator object at 0x0000019F0B78CE10&gt;
+
+    def test_accumulator_add_one(accum):
+    
+&gt;       accum.add(1)
+        ^^^^^^^^^
+E       AttributeError: 'Accumulator' object has no attribute 'add'
+
+tests\test_accum.py:17: AttributeError</failure></testcase><testcase classname="tests.test_accum" name="test_accumulator_add_three" time="0.001"><failure message="AttributeError: 'Accumulator' object has no attribute 'add'">accum = &lt;stuff.accum.Accumulator object at 0x0000019F0B7195B0&gt;
+
+    def test_accumulator_add_three(accum):
+    
+&gt;       accum.add(3)
+        ^^^^^^^^^
+E       AttributeError: 'Accumulator' object has no attribute 'add'
+
+tests\test_accum.py:22: AttributeError</failure></testcase><testcase classname="tests.test_accum" name="test_accumulator_add_twice" time="0.001"><failure message="AttributeError: 'Accumulator' object has no attribute 'add'">accum = &lt;stuff.accum.Accumulator object at 0x0000019F0B719BA0&gt;
+
+    def test_accumulator_add_twice(accum):
+    
+&gt;       accum.add(1)
+        ^^^^^^^^^
+E       AttributeError: 'Accumulator' object has no attribute 'add'
+
+tests\test_accum.py:27: AttributeError</failure></testcase><testcase classname="tests.test_accum" name="test_accumulator_cannot_set_count_directly" time="0.001"><failure message="Failed: DID NOT RAISE &lt;class 'AttributeError'&gt;">accum = &lt;stuff.accum.Accumulator object at 0x0000019F0B7AD7F0&gt;
+
+    def test_accumulator_cannot_set_count_directly(accum):
+    
+&gt;       with pytest.raises(AttributeError, match=r"can't set attribute"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'AttributeError'&gt;
+
+tests\test_accum.py:33: Failed</failure></testcase><testcase classname="tests.test_math" name="test_multiply[2-3-6]" time="0.001" /><testcase classname="tests.test_math" name="test_multiply[1-99-99]" time="0.001" /><testcase classname="tests.test_math" name="test_multiply[0-99-0]" time="0.001" /><testcase classname="tests.test_math" name="test_multiply[3--4--12]" time="0.001" /><testcase classname="tests.test_math" name="test_multiply[-5--5-25]" time="0.001" /><testcase classname="tests.test_math" name="test_multiply[2.5-6.7-16.75]" time="0.001" /></testsuite></testsuites>
